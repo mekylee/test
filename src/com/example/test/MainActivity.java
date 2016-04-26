@@ -4,13 +4,28 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
-
+    private Button btn;
+    private TextView text;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		btn=(Button)findViewById(R.id.button1);
+		text=(TextView)findViewById(R.id.textView1);
+		btn.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				text.setText("≤‚ ‘Ã·ΩªµΩgithub");
+			}
+		});
 	}
 
 	@Override
